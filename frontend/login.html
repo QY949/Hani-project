@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="YV5JA7mokNfx48bBLy2EMZ">
+<head data-page-node-id="kzuZHHOauXJtMK7afk5Zqr">
+    <meta charset="UTF-8" data-page-node-id="AdYK7BsX5PBAynSN19mPLb">
+    <title>云南哈尼非遗 - 登录 / 注册</title>
+    <link rel="stylesheet" href="css/style.css" data-page-node-id="KfrA37NfqWAfw1nZIyzQhN">
+</head>
+<body data-page-node-id="lxOlufJ51oXVzkRydwa8pM">
+    <nav class="navbar" data-page-node-id="hWhiU8hOdwnX29mlUXsSTW">
+        <div class="logo" data-page-node-id="jRtUWUQFzp4GbejtS1dIJX">哈尼非遗</div>
+        <ul data-page-node-id="vRsrdwQSDBixleq9Jn93Zj">
+            <li data-page-node-id="lYgpCYB1mIJiHvZjQj1p3P"><a href="index.html" data-page-node-id="zJVVQizFPFr2rEj555oP5M">首页</a ></li>
+            <li data-page-node-id="QhKRTh3DSb9yi5A1YFLuu2"><a href="history.html" data-page-node-id="847nigh78xFCabgXhoNgxa">历史文化</a ></li>
+            <li data-page-node-id="ej2LOTBDI4GZFIItDedOMr"><a href="gallery.html" data-page-node-id="FjfTVME2fqoJm3C4i7YM19">图集</a ></li>
+            <li data-page-node-id="fPuAnRZuLKIZk6OyI8aDfk"><a href="experience.html" data-page-node-id="63He2DOumDGHbtEsuVR2yD">互动体验</a ></li>
+            <li data-page-node-id="U8gBum5CrAW39ZBZ3FnfJa"><a href="game.html" data-page-node-id="iAccfbYPtL33unQJUXClDM">游戏</a ></li>
+            <li data-page-node-id="yfCgr62VOIwBY0qRsAtlv8"><a href="language.html" data-page-node-id="6g4rkfF5DjmcsQUmgBjM8a">语言</a ></li>
+            <li data-page-node-id="nlji4JRMl5QDy0XnbcEHFK"><a href="ai-assistant.html" data-page-node-id="edGNj8WyrNaqjFi8rGtn86">AI助手</a ></li>
+        </ul>
+    </nav>
+
+    <section class="content-section auth-section" data-page-node-id="7ReddGaKh1AsKYbdJamARH">
+        <h2 data-page-node-id="s8HSWqomehyohKnciBTJSk">登录 / 注册</h2>
+        <p class="auth-tip" data-page-node-id="ZRmQFiXdGImnZuzYUs4if4">登录后即可与哈尼文化 AI 专家对话，并上传你的哈尼影像</p >
+
+        <div class="auth-card" data-page-node-id="trySP5Zxxzq0BwAfJAEmEk">
+            <!-- 切换登录 / 注册 -->
+            <div class="auth-tabs" data-page-node-id="Po1FA0smTaxmJQ84xoF0xD">
+                <button id="tabLogin" class="auth-tab active" type="button" data-page-node-id="Vd7KYpkfmvI72gHyItrIGD">登录</button>
+                <button id="tabRegister" class="auth-tab" type="button" data-page-node-id="N8RSayJR7HlTGvtkogvjgU">注册</button>
+            </div>
+
+            <p id="authError" class="auth-error" style="display:none;" data-page-node-id="2xd5zDH78m6YwWo2FPsBFj"></p >
+
+            <!-- 登录表单 -->
+            <form id="loginForm" class="auth-form" data-page-node-id="LHrVLZ8OiAfz5FQqHbizFf">
+                <label for="loginUsername" data-page-node-id="tQNT3sjBYzKhfBz7WPLlYr">用户名</label >
+                <input type="text" id="loginUsername" placeholder="请输入用户名" autocomplete="username" required data-page-node-id="89MqxXoCEJnb2Yot6Qw5pe">
+
+                <label for="loginPassword" data-page-node-id="wjluN5FAQdXkGWlwxASNX0">密码</label >
+                <input type="password" id="loginPassword" placeholder="请输入密码" autocomplete="current-password" required data-page-node-id="nLb4UyBKoQg79Ze1pMFPXv">
+
+                <button type="submit" class="auth-submit" data-page-node-id="ZHmLB3Vn6K6ZdBQfiQ5HYY">登 录</button>
+            </form>
+
+            <!-- 注册表单 -->
+            <form id="registerForm" class="auth-form" style="display:none;" data-page-node-id="dz6taw69ensY0HD27RNuFZ">
+                <label for="regUsername" data-page-node-id="wGokT4zfADhmQfMqGWdk5X">用户名</label >
+                <input type="text" id="regUsername" placeholder="3-30 个字符" autocomplete="username" required data-page-node-id="ZJDUaB4exJBlxwYGB0CliY">
+
+                <label for="regPassword" data-page-node-id="2v930AjGeCWh4Re3qAFiqj">密码</label >
+                <input type="password" id="regPassword" placeholder="至少 6 位" autocomplete="new-password" required data-page-node-id="t1CJSEt9Y4TOEKBZ1YrF7c">
+
+                <label for="regPassword2" data-page-node-id="gONpZ0x80aoJMvn2Rb0FyT">确认密码</label >
+                <input type="password" id="regPassword2" placeholder="再输入一次密码" autocomplete="new-password" required data-page-node-id="mDBTckkQO8f3sy0fdPkIQb">
+
+                <button type="submit" class="auth-submit" data-page-node-id="SpRTdl7b7G98HN3AaB628W">注 册</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // ================= 登录 / 注册页逻辑 =================
+        const params = new URLSearchParams(location.search);
+        const nextUrl = params.get('next') || 'index.html';
+
+        const tabLogin = document.getElementById('tabLogin');
+        const tabRegister = document.getElementById('tabRegister');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const authError = document.getElementById('authError');
+
+        function showTab(which) {
+            const isLogin = which === 'login';
+            tabLogin.classList.toggle('active', isLogin);
+            tabRegister.classList.toggle('active', !isLogin);
+            loginForm.style.display = isLogin ? 'block' : 'none';
+            registerForm.style.display = isLogin ? 'none' : 'block';
+            hideError();
+        }
+        function showError(message) {
+            authError.textContent = message;
+            authError.style.display = 'block';
+        }
+        function hideError() {
+            authError.style.display = 'none';
+        }
+
+        tabLogin.addEventListener('click', () => showTab('login'));
+        tabRegister.addEventListener('click', () => showTab('register'));
+
+        // 已登录用户访问本页 -> 直接去目标页
+        Auth.refresh().then(user => {
+            if (user) location.replace(nextUrl);
+        });
+
+        loginForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            hideError();
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        username: document.getElementById('loginUsername').value.trim(),
+                        password: document.getElementById('loginPassword').value
+                    })
+                });
+                const data = await response.json();
+                if (!response.ok) {
+                    showError(data.error || '登录失败，请检查用户名和密码');
+                    return;
+                }
+                location.href = nextUrl;
+            } catch (error) {
+                showError('无法连接服务器，请确认后端已启动（python app.py）');
+            }
+        });
+
+        registerForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            hideError();
+            const username = document.getElementById('regUsername').value.trim();
+            const password = document.getElementById('regPassword').value;
+            const password2 = document.getElementById('regPassword2').value;
+
+            if (username.length < 3 || username.length > 30) {
+                return showError('用户名长度需为 3-30 个字符');
+            }
+            if (password.length < 6) {
+                return showError('密码长度至少 6 位');
+            }
+            if (password !== password2) {
+                return showError('两次输入的密码不一致');
+            }
+
+            try {
+                const response = await fetch('/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+                const data = await response.json();
+                if (!response.ok) {
+                    showError(data.error || '注册失败');
+                    return;
+                }
+                location.href = nextUrl;
+            } catch (error) {
+                showError('无法连接服务器，请确认后端已启动（python app.py）');
+            }
+        });
+    </script>
+</body>
+</html>

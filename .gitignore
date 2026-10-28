@@ -1,0 +1,22 @@
+# ===== 敏感配置（含 API Key，严禁提交到 GitHub！）=====
+.env
+
+# ===== Python 虚拟环境与缓存 =====
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ===== 本地运行日志 =====
+*.log
+startup.log
+
+# ===== 系统垃圾文件 =====
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ===== WorkBuddy 工具内部数据（非项目源码）=====
+.workbuddy/

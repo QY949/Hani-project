@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="gAuHAZqMupyEJnYPBlBA6V">
+<head data-page-node-id="K2AVYFxkvH8RphgTYZFdIo">
+    <meta charset="UTF-8" data-page-node-id="wq01iKBGtyNrJxgC49hMCu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="RDPiXDA4aaXA7FV7hZ70vs">
+    <title>云南哈尼非遗 - 互动体验</title>
+    <link rel="stylesheet" href="css/style.css" data-page-node-id="gk3MB1hFWuK4TfWyo88zIE">
+</head>
+<body data-page-node-id="aWh04DFObCVbHRjEmtuGSt">
+    <nav class="navbar" data-page-node-id="rIHs6HAcVCiFOTcKDza0Vz">
+        <div class="logo" data-page-node-id="2WZ2UFFAslLDfwuLUB6ldB">哈尼非遗</div>
+        <ul data-page-node-id="pP3NsUfhpbNN3cOwLaDBme">
+            <li data-page-node-id="YIvKY1z6zQ4PB8yAh8rA4n"><a href="index.html" data-page-node-id="RnhZf2YLXkbOgScXAtE3Lv">首页</a ></li>
+            <li data-page-node-id="MuXan7HDmcEw737pXTYBmx"><a href="history.html" data-page-node-id="4UyFftn69Qe8OOJs4NjXnS">历史文化</a ></li>
+            <li data-page-node-id="BMm2cUt8Kl6Ym2T50BIAjJ"><a href="gallery.html" data-page-node-id="q3cdWPaF1fcanBGjILziZx">图集</a ></li>
+            <li data-page-node-id="PDTLt6CWH9nBJH5WT5Sjs3"><a href="experience.html" data-page-node-id="h7HrroRaYzaoXFwV27KSeR">互动体验</a ></li>
+            <li data-page-node-id="8P7LGH5cfUghldOKu3uJxa"><a href="game.html" data-page-node-id="zQlBj7nk1LYAAALf1WMpKJ">游戏</a ></li>
+            <li data-page-node-id="xREZhp2ynNPGcgFHb0WJPw"><a href="language.html" data-page-node-id="VeM9PEuiXRptSj5uxgaAjD">语言</a ></li>
+            <li data-page-node-id="skPYYWTGp8tO2vmIYDaFPt"><a href="ai-assistant.html" data-page-node-id="D9BBolOJtIUaQtQGIUT2KK">AI助手</a ></li>
+        </ul>
+    </nav>
+
+    <section class="content-section" data-page-node-id="CElEvtXvaVLM5hbC5CzKpU">
+        <h2 data-page-node-id="rFGcqCGkEujKurOchFhKKU">哈尼服饰拼图</h2 >
+        <div class="hani-rule" data-page-node-id="iJ7GGBhCCEIF2Ub4gjBUKS"></div>
+        <p class="subtitle" data-page-node-id="4URGuX9dO9rOaDdwqxA4OZ">点击两块碎片交换位置，拼出完整的哈尼纹样</p >
+
+        <!-- 拼图素材切换：从 images/ 目录选择不同图片作为拼图底图 -->
+        <div class="puzzle-picker" id="puzzlePicker">
+            <span class="puzzle-picker-label">拼图素材：</span>
+            <div class="puzzle-thumbs" id="puzzleThumbs"></div>
+        </div>
+
+        <div class="puzzle-wrap" data-page-node-id="14O25G6G3yuhzbjmlzKSFo">
+            <div class="puzzle-board" id="puzzleBoard" data-page-node-id="l510Tf500lGRDgoBiWSXFQ"></div>
+
+            <div class="puzzle-toolbar" data-page-node-id="Dgm1LhHGvGPaGCzDNiTZUA">
+                <span class="puzzle-status" id="puzzleStatus" data-page-node-id="G82Kt8zezXAh1T0XKmJYKb">已归位 0 / 9</span >
+                <div class="puzzle-actions" data-page-node-id="M682THH9L8R5IAxuVFpzyC">
+                    <button class="btn btn--ghost" id="puzzleHintBtn" data-page-node-id="VEZGjKW2CU2kkp40nxcRN3">看原图</button>
+                    <button class="btn" id="puzzleResetBtn" data-page-node-id="ahvqprWv8tggU3qUCHcaeq">重新打乱</button>
+                </div>
+            </div>
+
+            <!-- 原图参考（默认隐藏） -->
+            <div id="puzzleHintBox" style="display:none; margin-top:18px; text-align:center;" data-page-node-id="IqDS3vph4P0VRUTMTHX7HF">
+                <img src="./images/puzzle_hani_embroidery.jpg" alt="哈尼刺绣纹样原图" id="puzzleHintImg"
+                     style="max-width:320px; width:100%; border:3px solid #D4AF37; border-radius:10px;" data-page-node-id="owdM2GE5OpmQmxuK3Q1pKq">
+                <p id="puzzleHintCap" style="color:#7A756C; font-size:13px; margin-top:8px;" data-page-node-id="eN5G5jrAQ4AufGw57XDQnH">参考原图：哈尼刺绣回纹（拼好就是它！）</p >
+            </div>
+
+            <!-- 完成提示 -->
+            <div class="puzzle-done" id="puzzleDone" data-page-node-id="0V9CedvOVlPHy9cEU9DNmP">
+                <h4 data-page-node-id="8NMN51DawsNTbHH3ISL0EW">拼图完成！</h4 >
+                <p id="puzzleDoneText" data-page-node-id="xoc3Ey3IXSHzBEUwf23Ko6">你拼出的是哈尼族经典的"回纹"刺绣纹样 —— 常见于衣襟、背包与头巾，象征生生不息。</p >
+            </div>
+        </div>
+
+        <div class="hani-divider" data-page-node-id="Aj2F0JSWwmz2n4MrjK4ZC9"></div>
+
+        <!-- 纹样知识卡 -->
+        <div class="pattern-cards" data-page-node-id="UTW6JMJe6gzjdIUxMHnQBx">
+            <div class="pattern-card" data-page-node-id="qf8n8w8lZMh1AGMTBTukP8">
+                <h5 data-page-node-id="rVmxPoPjoU8KP3mOAzLJmv">回 纹</h5 >
+                <p data-page-node-id="FziMPBMkBFZ61Fxm8TSM3Q">连续曲折的螺旋纹，是哈尼刺绣中最常见的骨架纹样，寓意族群繁衍、生生不息。</p >
+            </div >
+            <div class="pattern-card" data-page-node-id="cnAlgd5zxA3o7BN2xu6xFD">
+                <h5 data-page-node-id="JZmqGvPmJWFYDm3kT2puul">三角纹</h5 >
+                <p data-page-node-id="0KMEnOYjQAvDvw9alP59Zc">锯齿状连续三角，多饰于衣襟与裤脚边，有人认为它记录着哈尼先民迁徙翻越的山峦。</p >
+            </div >
+            <div class="pattern-card" data-page-node-id="HrWYmlSUocsaNhBLeZvadr">
+                <h5 data-page-node-id="nQmJYjYDXXl7a5A9XobmgW">菱形纹</h5 >
+                <p data-page-node-id="8Ej9RjsA9lC7lNYBefY2q2">几何菱形内套小菱形，如同梯田层层展开的剖面，是哈尼人对家园地貌的艺术抽象。</p >
+            </div >
+            <div class="pattern-card" data-page-node-id="sxvwP1NOJTMbC14SctHbZX">
+                <h5 data-page-node-id="gjXXY4GbYRlW3ztpOnuovh">蕨菜纹</h5 >
+                <p data-page-node-id="NJ1BT70xOhg9m9LjLiVgSO">模拟蕨菜嫩芽卷曲形态的纹样，象征生机与春天，常出现在青年女子的盛装之上。</p >
+            </div >
+        </div>
+    </section>
+
+    <footer class="page-footer" data-page-node-id="9T5sdVPE1jZNJnnrWaTAJp">
+        <div class="footer-pattern" data-page-node-id="IxpyTDSENYslHDX3ojIK3g"></div>
+        <p data-page-node-id="zeD6e4cqeL9gpyPzQFEcnX">向世界介绍云南少数民族 · 哈尼族非物质文化遗产</p >
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/experience.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# Render 部署配置（Blueprint 一键部署）
+# 文档：https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: hani-ich-culture          # 服务名称，公网链接为 https://hani-ich-culture.onrender.com
+    runtime: python
+    plan: free                      # 免费套餐
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python backend/init_db.py --quiet && gunicorn --chdir backend app:app --bind 0.0.0.0:$PORT
+    healthCheckPath: /api/health
+    envVars:
+      # 固定 Session 密钥：重启后已登录用户不掉线（值由 Render 自动生成）
+      - key: SECRET_KEY
+        generateValue: true
+      # Python 版本，与 backend/runtime.txt 保持一致
+      - key: PYTHON_VERSION
+        value: 3.12.4
+      # 大模型 API Key：sync:false 表示不在仓库里保存，
+      # 部署时在 Render 面板手动填入（内容就是 backend/.env 里的 LLM_API_KEY）
+      - key: LLM_API_KEY
+        sync: false
+      # 如需改模型/接口地址，可取消下面注释并按需修改：
+      # - key: LLM_MODEL
+      #   value: qwen3.8-flash

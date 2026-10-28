@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="PClPANWctLZeEtjrW2cEuW">
+<head data-page-node-id="qJ8hOxxXfLTVWEdyE0sspO">
+    <meta charset="UTF-8" data-page-node-id="bzqHcPLtZvpwR2jLGjMI95">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="c97kOgJBl24YKc2nXeyhPE">
+    <title>云南哈尼非遗 - AI助手</title>
+    <link rel="stylesheet" href="css/style.css" data-page-node-id="3VYVYUnPIN2g2TU3nf3PyY">
+</head>
+<body data-page-node-id="7vABugRFBVpEl4Iyv9xpLA">
+    <nav class="navbar" data-page-node-id="TNWIPUcVgtBimm2QPo7qhP">
+        <div class="logo" data-page-node-id="H6GLokS4HJvw6QyowvO7wf">哈尼非遗</div>
+        <ul data-page-node-id="oW9305s85BY4dvloecrcYk">
+            <li data-page-node-id="3PkQHiTMeLhYwC7lSOgPKU"><a href="index.html" data-page-node-id="gfOihdAmZlaJ8wwrCVGhgF">首页</a></li>
+            <li data-page-node-id="3IRoRzgDbgJDJZy8Ztetdj"><a href="history.html" data-page-node-id="fNrKSRsBznjmBAAOxUpjxs">历史文化</a></li>
+            <li data-page-node-id="H3v0B7qtnIR8jI86Qa9IiI"><a href="gallery.html" data-page-node-id="gsAJJxmce9WsWma9T71Cqr">图集</a></li>
+            <li data-page-node-id="9e8Lf0ZJAQpYliU7gAaxHA"><a href="experience.html" data-page-node-id="JWMpOlM4FVkHjfio0lFEwm">互动体验</a></li>
+            <li data-page-node-id="68Q0ImvHCxUAaEVXToO8q6"><a href="game.html" data-page-node-id="3KDsGiYi79iOaVfUDxDH0p">游戏</a></li>
+            <li data-page-node-id="zYRJSpt8DUCWFYfSqBtb2D"><a href="language.html" data-page-node-id="SYT9CNxysftq17TzvLaEpO">语言</a></li>
+            <li data-page-node-id="pheK3zrEaiLqQ1BHgJfoq0"><a href="ai-assistant.html" data-page-node-id="6fAHDMmLVXn2PL5wL4L63D">AI助手</a></li>
+        </ul>
+    </nav>
+
+    <section class="content-section" data-page-node-id="6HKkxYIP4OvnvPq3a9CApL">
+        <h2 data-page-node-id="8Uqn8DlEVBKgnMo8U2185w">哈尼非遗 AI 助手</h2>
+        <div class="hani-rule" data-page-node-id="i34NypvcjEu7FzLUvsiGBN"></div>
+        <p class="subtitle" data-page-node-id="K2LOMOXho9G3f81sXzIyJQ">由大模型驱动的哈尼族文化专家，你可以问我：哈尼族有几种方言？红河哈尼梯田在哪里？也可以上传一张图片，让 AI 帮你识别其中的哈尼元素。</p>
+
+        <!-- 未登录提示（登录后由 JS 隐藏） -->
+        <div class="chat-login-banner" id="chatLoginBanner" style="display:none;" data-page-node-id="svQBfY9fHsawvaQST9TPqY">
+            与 AI 专家对话需要登录 —— <a id="chatLoginLink" href="login.html?next=%2Fai-assistant.html" data-page-node-id="IFoIfDD7ttXhLBzAfkVXEB">立即登录</a>
+        </div>
+
+        <div class="chat-container" data-page-node-id="2k8P74c90dmFjSXXnvwFbc">
+            <!-- 顶部头像栏 -->
+            <div class="chat-header" data-page-node-id="mBRrstYbaJ6SNqvo1HK8Pd">
+                <img class="chat-avatar" src="./images/ai_avatar.png" alt="哈尼非遗小助手头像" data-page-node-id="ZAy4ATAh0qmTaHOPHDNFOs">
+                <div class="chat-header-info" data-page-node-id="P9q49byawgb9BUtFxsUFdg">
+                    <strong data-page-node-id="RkwKlsfjCZYgcSU7OZ1dH8">哈尼非遗小助手</strong>
+                    <span data-page-node-id="LDkgGadFFlaDX5EER1CFNG">竹筒倒水迎宾客 · 有问必答</span>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages" data-page-node-id="DMTBgdkot4HmpFFheEMdWO">
+                <div class="message ai-message" data-page-node-id="YDYczV5eTIyfvAC0ZRac88">你好！我是哈尼非遗小助手，精通哈尼族文化、历史、语言和梯田农耕文明。你可以直接提问，也可以点「图片」上传一张照片，让我来识别它与哈尼族的渊源。</div>
+            </div>
+
+            <!-- 待发送图片预览 -->
+            <div class="chat-upload-row" data-page-node-id="2cHtc5rAleObpGsvUEGMEE">
+                <div class="chat-image-preview" id="chatImagePreview" style="display:none;" data-page-node-id="sIeDir7Qsu9vafE8KyH7hR">
+                    <img id="chatImagePreviewImg" src="./images/placeholder.jpg" alt="待发送图片" data-page-node-id="6VFOVWXRqHIeh4pcFX3c48">
+                    <button type="button" class="chat-image-remove" id="chatImageRemove" title="移除图片" data-page-node-id="BMEUuwaon2EUlzcjvSC5fV">×</button>
+                </div>
+                <p class="chat-upload-status" id="chatUploadStatus" data-page-node-id="mlG5t6HmHSd3vnBvDyZDro"></p>
+            </div>
+
+            <div class="chat-input" data-page-node-id="du2iMC5YtCsAdOtetnPmvO">
+                <input type="file" id="chatImageFile" accept="image/jpeg,image/png,image/gif,image/webp,image/bmp" hidden data-page-node-id="cWb9npXPahAxJyuBEA6XQx">
+                <button type="button" class="chat-image-btn" id="chatImageBtn" title="上传图片，让 AI 识别" data-page-node-id="FOcvry7cuEWL7TnPHEMlHr">图片</button>
+                <input type="text" id="userInput" placeholder="请输入你的问题，或先上传图片让 AI 识别..." data-page-node-id="XP9fEtUAfN8eQKCWPYwZE7">
+                <button id="sendBtn" data-page-node-id="Nfprn1wVVCW6AdeE0jedgM">发送</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 竹筒倒水加载动画模板（等待 AI 回复时显示） -->
+    <template id="bambooLoaderTemplate" data-page-node-id="ereRtyZywpxngxmR8zrYgS">
+        <div class="chat-loading" data-page-node-id="IWydyMo1j7KaqSCgGAuSuf">
+            <svg class="bamboo-pour" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-page-node-id="t4woSEucTHEGaG5k7OhS9V">
+                <defs data-page-node-id="UfFkiATglrJCIsFd5rk37I">
+                    <linearGradient id="bpBamboo" x1="0" y1="0" x2="1" y2="0" data-page-node-id="Kpg9B10RcxNYDbRv1Jw8wI">
+                        <stop offset="0" stop-color="#3D6E4E" data-page-node-id="lSDlHt8TCbNi3KGsAwIa2G"/>
+                        <stop offset="0.5" stop-color="#224A32" data-page-node-id="EFa65F9a6zJRsAe0YpmY7z"/>
+                        <stop offset="1" stop-color="#16321F" data-page-node-id="bhxiXqCaR6psjH8S2RBOCm"/>
+                    </linearGradient>
+                </defs>
+                <!-- 承水的碗（梯田水层意象） -->
+                <ellipse cx="102" cy="100" rx="32" ry="8" fill="#16321F" data-page-node-id="edBtcImKHcgw7CWIq3yBw2"/>
+                <ellipse class="bp-water" cx="102" cy="99" rx="22" ry="5" fill="#7FD3C9" data-page-node-id="x1UB2nOWlptvWpBKX5jfjb"/>
+                <!-- 涟漪 -->
+                <ellipse class="bp-ripple" cx="102" cy="99" rx="8" ry="2.5" fill="none" stroke="#7FD3C9" stroke-width="1.6" data-page-node-id="ZejYpOCQuQTXk5y2nqKV13"/>
+                <ellipse class="bp-ripple bp-ripple--2" cx="102" cy="99" rx="8" ry="2.5" fill="none" stroke="#7FD3C9" stroke-width="1.6" data-page-node-id="wnTI6UouZbLRdPww2ZED9m"/>
+                <!-- 水流 -->
+                <path class="bp-stream" d="M64 62 Q 74 82 100 94" fill="none" stroke="#7FD3C9" stroke-width="4" stroke-linecap="round" data-page-node-id="rnMHIC6ONviMXeuFTuuNj0"/>
+                <!-- 倾斜的竹筒（外层烘焙倾斜角，内层做轻微晃动动画） -->
+                <g transform="rotate(38 46 32)" data-page-node-id="PmgIkGjMng39kVKmqUHOAF">
+                    <g class="bp-bamboo" data-page-node-id="e6CfhwpM01XpaGTJaaHlbo">
+                        <rect x="28" y="2" width="36" height="62" rx="11" fill="url(#bpBamboo)" data-page-node-id="aCDqcUpXoAkjQvJKZU8wyS"/>
+                        <rect x="28" y="18" width="36" height="5" fill="#12291C" data-page-node-id="GGSbPHyD3YrzajYMgeVsdd"/>
+                        <rect x="28" y="40" width="36" height="5" fill="#12291C" data-page-node-id="QRqjxFfcsF8CVKuRLQ1vqu"/>
+                        <rect x="33" y="8" width="5" height="50" rx="2.5" fill="#3D6E4E" opacity="0.7" data-page-node-id="eAoyHl6m3ERbOweFzjdGlj"/>
+                        <ellipse cx="46" cy="64" rx="18" ry="6" fill="#0E2418" data-page-node-id="M2seYONMNzLx3OAvV1KLRY"/>
+                        <ellipse cx="46" cy="64" rx="11" ry="3.5" fill="#071A10" data-page-node-id="iLXlV5haDOHKguaFA8XCuh"/>
+                    </g>
+                </g>
+            </svg>
+            <span class="chat-loading-text" data-page-node-id="0urDLtdFgcvmGvtHwrC7qv">正在为你倒水沏茶…</span>
+        </div>
+    </template>
+
+    <script src="js/auth.js"></script>
+    <script src="js/ai-assistant.js"></script>
+</body>
+</html>
